@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2019, James Zhan 詹波 (jfinal@126.com).
+ * Copyright (c) 2011-2021, James Zhan 詹波 (jfinal@126.com).
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import com.jfinal.render.ViewType;
  */
 public interface Const {
 	
-	String JFINAL_VERSION = "3.8";
+	String JFINAL_VERSION = "4.9";
 	
 	ViewType DEFAULT_VIEW_TYPE = ViewType.JFINAL_TEMPLATE;
 	
@@ -51,7 +51,7 @@ public interface Const {
 	
 	int MIN_SECONDS_OF_TOKEN_TIME_OUT = 300;				// 300 seconds ---> 5 minutes
 	
-	int DEFAULT_CONFIG_PLUGIN_ORDER = 2;
+	int DEFAULT_CONFIG_PLUGIN_ORDER = 3;
 	
 	ControllerFactory DEFAULT_CONTROLLER_FACTORY = new ControllerFactory();
 	

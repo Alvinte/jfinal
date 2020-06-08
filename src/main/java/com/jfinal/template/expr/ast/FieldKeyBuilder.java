@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2019, James Zhan 詹波 (jfinal@126.com).
+ * Copyright (c) 2011-2021, James Zhan 詹波 (jfinal@126.com).
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,10 +33,14 @@ public abstract class FieldKeyBuilder {
 	}
 	
 	/**
-	 * 设置为官方提供的 FastFieldKeyBuilder 实现，性能更高
+	 * 开启 FastFieldKeyBuilder，性能更高
 	 */
-	public static void setToFastFieldKeyBuilder() {
-		instance = new FastFieldKeyBuilder();
+	public static void setFastFieldKeyBuilder(boolean enable) {
+		if (enable) {
+			instance = new FastFieldKeyBuilder();
+		} else {
+			instance = new StrictFieldKeyBuilder();
+		}
 	}
 	
 	/**
